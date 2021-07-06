@@ -38,6 +38,12 @@ package "ECサイト" as target_system {
         del_flag
         reg_date
     }
+     entity "カテゴリマスター" <m_customers> <<M,DDAA00>> {
+        +category_id[PK]
+        --
+        name
+        reg_date
+    }
   }
 @enduml
 ```
