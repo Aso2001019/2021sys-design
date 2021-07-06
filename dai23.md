@@ -1,10 +1,8 @@
-```stratuml
+```uml
 @startuml 
-!include table.pu
-
-Entity01 }|..||Entity02
-Entity03 }○..○|Entity04
-Entity05 ||..○{Entity06
-Entity07 |○..||Entity08
+Entity01 }|..|| Entity02
+Entity03 }○..○| Entity04
+Entity05 ||--○{ Entity06
+Entity07 |○--|| Entity08
 @enduml
 ```
