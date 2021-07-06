@@ -13,13 +13,28 @@ package "ECサイト" as target_system {
         reg_date
     }
     entity "購入テーブル" <m_customers> <<T,00AADD>> {
-        + customer_code [PK]
+        +order_id[PK]
         --
-        pass
-        name
-        address
-        tel
-        mail
+        # customer_code[FK]
+        purchase_date
+        total_price
+    }
+    entity "購入詳細テーブル" <m_customers> <<T,00AADD>> {
+        +order_id[PK]
+        +detail_id[PK]
+        --
+        # item_code[FK]
+        price
+        num
+    }
+    entity "商品マスター" <m_customers> <<M,DDAA00>> {
+        +item_code[PK]
+        --
+        item_name
+        price
+        # category_id[FK]
+        image
+        detail
         del_flag
         reg_date
     }
