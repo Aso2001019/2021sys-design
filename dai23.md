@@ -27,7 +27,7 @@ package "ECサイト" as target_system {
         price
         num
     }
-    entity "商品マスター" <m_customers> <<M,DDAA00>> {
+    entity "商品マスタ" <m_customers> <<M,DDAA00>> {
         +item_code[PK]
         --
         item_name
@@ -38,12 +38,17 @@ package "ECサイト" as target_system {
         del_flag
         reg_date
     }
-     entity "カテゴリマスター" <m_customers> <<M,DDAA00>> {
+     entity "カテゴリマスタ" <m_customers> <<M,DDAA00>> {
         +category_id[PK]
         --
         name
         reg_date
     }
   }
+  
+  顧客マスタ |o-ri-o{ 購入テーブル
+  購入テーブル ||-ri-|{ 購入詳細テーブル
+  購入詳細テーブル }-do-|| 商品マスタ
+  商品マスタ}o-le|| カテゴリマスタ
 @enduml
 ```
