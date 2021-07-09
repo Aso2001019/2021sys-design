@@ -1,6 +1,6 @@
 #DB定義書
 ## ER図
-[ER図はこちら]1(  )
+[ER図はこちら]( https://github.com/Aso2001019/2021sys-design/blob/main/dai23.md )
 
 |属性名|型|PK|NN|FK|
 |------|--|--|--|--|
